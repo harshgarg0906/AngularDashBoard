@@ -1,0 +1,44 @@
+<mat-toolbar color="primary">
+
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSideBar()"> 
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>App Logo</span>
+                <!-- <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+                    <ul fxLayout="row" fxLayoutGap="20px">
+                        <li>
+                        <button mat-icon-button>
+                            <mat-icon>setting</mat-icon>
+                        </button>
+                        </li>
+
+                        <li>
+                            <button mat-icon-button>
+                                <mat-icon>help outline</mat-icon>
+                            </button>
+                        </li>
+                        <li>
+                        menu
+                        </li>
+                    </ul>
+                </div> -->
+                <div fxFlex fxLayout="row" fxLayoutAlign="end center"  fxLayoutGap="20px">  
+                <i class="material-icons">settings</i>
+                <i class="material-icons"> help</i>
+                <button mat-button [matMenuTriggerFor]="menu">
+                        <i class="material-icons">
+                                markunread_mailbox
+                                </i>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item>
+                      <div fxLayout="row" fxFlex>
+                        <i class="material-icons">supervised_user_circle</i>
+                        <span>SignOut</span>
+                    </div> 
+                  </button>
+                </mat-menu>
+                </div>
+    </mat-toolbar-row>
+</mat-toolbar>
